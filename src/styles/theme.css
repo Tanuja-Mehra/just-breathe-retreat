@@ -1,0 +1,18 @@
+:root {
+  --brand-teal: #014D4E;
+  --brand-navy: #000000;
+  --brand-cream: #F9F4EA;
+  --brand-coral: #FF7F50;
+  --brand-dark-teal:  #069494;
+}
+
+body {
+  background-color: var(--brand-cream);
+  color: var(--brand-navy);
+}
+
+::selection {
+  background: var(--brand-teal);
+  color: var(--brand-navy);
+  background-color: var(--brand-dark-teal);
+}
