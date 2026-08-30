@@ -20,7 +20,7 @@ function App() {
         <LocationSection />
         <HostSection />
         <HighlightsSection />
-        <ScheduleSection />
+        {/* <ScheduleSection /> */}
         <GallerySection />
         <TestimonialsSection />
         <PricingSection />
