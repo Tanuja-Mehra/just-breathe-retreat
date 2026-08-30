@@ -2,10 +2,10 @@ import Card from '../common/Card';
 import { retreatInfo } from '../../data/retreatInfo';
 
 const locationImages = [
-  { src: '/assets/gallery/location1.JPG', alt: 'Lake view at Naukuchiatal' },
-  { src: '/assets/gallery/location8.jpg', alt: 'Scenic hill view in the retreat area' },
-  { src: '/assets/gallery/location3.JPG', alt: 'Nature and water setting around the retreat' },
-  { src: '/assets/gallery/location4.JPG', alt: 'Peaceful lakeside landscape' },
+  { src: 'assets/gallery/location1.JPG', alt: 'Lake view at Naukuchiatal' },
+  { src: 'assets/gallery/location8.jpg', alt: 'Scenic hill view in the retreat area' },
+  { src: 'assets/gallery/location3.JPG', alt: 'Nature and water setting around the retreat' },
+  { src: 'assets/gallery/location4.JPG', alt: 'Peaceful lakeside landscape' },
 ];
 
 function LocationSection() {
