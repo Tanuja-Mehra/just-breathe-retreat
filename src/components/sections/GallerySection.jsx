@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import Slider from 'slick-carousel';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { galleryData } from '../../data/galleryData';
 
 const filters = ['All',  'Yoga', 'Kayaking', 'walk', 'Meals','Workshop', 'Bonfire', 'TempleVisit'];
@@ -8,12 +11,16 @@ function GallerySection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const [zoomed, setZoomed] = useState(false);
+  const sliderRef = useRef(null);
 
   const visibleImages = galleryData.filter((item) => activeFilter === 'All' || item.tag === activeFilter);
 
   useEffect(() => {
     setCurrentIndex(0);
     setZoomed(false);
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0);
+    }
   }, [activeFilter]);
 
   useEffect(() => {
@@ -25,14 +32,16 @@ function GallerySection() {
 
   const currentImage = visibleImages[currentIndex] ?? null;
 
-  const goToPrevious = () => {
-    if (!visibleImages.length) return;
-    setCurrentIndex((prev) => (prev === 0 ? visibleImages.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    if (!visibleImages.length) return;
-    setCurrentIndex((prev) => (prev === visibleImages.length - 1 ? 0 : prev + 1));
+  const slickSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    beforeChange: (current, next) => setCurrentIndex(next),
+    arrows: false,
   };
 
   return (
@@ -59,9 +68,28 @@ function GallerySection() {
         {visibleImages.length > 0 ? (
           <div className="mt-10 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft sm:p-6">
             <div className="relative">
+              <Slider ref={sliderRef} {...slickSettings}>
+                {visibleImages.map((item, index) => (
+                  <div key={`${item.title}-${index}`} className="block w-full overflow-hidden rounded-[1.5rem]">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImage(item)}
+                      className="block w-full"
+                      aria-label={`View ${item.title} in full size`}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-[380px] w-full object-cover transition duration-300 hover:scale-[1.02] sm:h-[500px]"
+                      />
+                    </button>
+                  </div>
+                ))}
+              </Slider>
+
               <button
                 type="button"
-                onClick={goToPrevious}
+                onClick={() => sliderRef.current?.slickPrev()}
                 className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-brand-navy shadow-md transition hover:bg-white"
                 aria-label="Previous image"
               >
@@ -70,20 +98,7 @@ function GallerySection() {
 
               <button
                 type="button"
-                onClick={() => setSelectedImage(currentImage)}
-                className="block w-full overflow-hidden rounded-[1.5rem]"
-                aria-label={`View ${currentImage.title} in full size`}
-              >
-                <img
-                  src={currentImage.image}
-                  alt={currentImage.title}
-                  className="h-[380px] w-full object-cover transition duration-300 hover:scale-[1.02] sm:h-[500px]"
-                />
-              </button>
-
-              <button
-                type="button"
-                onClick={goToNext}
+                onClick={() => sliderRef.current?.slickNext()}
                 className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-brand-navy shadow-md transition hover:bg-white"
                 aria-label="Next image"
               >
