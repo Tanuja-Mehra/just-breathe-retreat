@@ -18,6 +18,8 @@ function GallerySection() {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
+    variableWidth: false,
+    centerMode: false,
     responsive: [
       {
         breakpoint: 1280,
@@ -58,7 +60,7 @@ function GallerySection() {
           <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-soft sm:p-5">
             <Slider ref={sliderRef} {...slickSettings}>
               {galleryData.map((item, index) => (
-                <div key={`${item.title}-${index}`} className="outline-none">
+                <div key={`${item.title}-${index}`} className="px-2 outline-none">
                   <button
                     type="button"
                     onClick={() => setSelectedImage(item)}
@@ -68,7 +70,7 @@ function GallerySection() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="h-[380px] w-full object-cover transition duration-300 hover:scale-[1.02] sm:h-[500px]"
+                      className="aspect-square w-full rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.02]"
                     />
                   </button>
                 </div>
