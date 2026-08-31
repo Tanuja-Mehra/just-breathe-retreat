@@ -38,7 +38,8 @@ function GallerySection() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
     beforeChange: (current, next) => setCurrentIndex(next),
     arrows: false,
   };
