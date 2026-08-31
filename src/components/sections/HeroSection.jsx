@@ -1,15 +1,15 @@
 import Button from '../common/Button';
 import Badge from '../common/Badge';
 import { retreatInfo } from '../../data/retreatInfo';
-import heroImage from '../../../public/assets/images/hero.jpg';
+//import heroImage from '../../../public/assets/images/hero.jpg';
 
 function HeroSection() {
   return (
     <section id="hero" className="relative overflow-hidden bg-brand-navy text-white">
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center opacity-60"
         style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      /> */}
       <div className="relative mx-auto flex max-w-7xl flex-col gap-8 px-6 py-24 lg:flex-row lg:place-items-end lg:justify-between lg:px-8 lg:py-32">
         <div className="max-w-2xl">
           {/* <Badge className="mb-4">Early Bird Offer • Save 15%</Badge> */}
