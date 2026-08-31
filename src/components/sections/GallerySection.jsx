@@ -11,22 +11,18 @@ function GallerySection() {
   const slickSettings = {
     dots: false,
     infinite: true,
-    speed: 700,
-    slidesToShow: 5,
+    speed: 2200,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
     pauseOnHover: true,
     arrows: false,
     variableWidth: false,
     centerMode: false,
+    draggable: false,
     responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
       {
         breakpoint: 1024,
         settings: {
@@ -57,20 +53,20 @@ function GallerySection() {
         </div>
 
         {galleryData.length > 0 ? (
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-soft sm:p-5">
+          <div className="relative overflow-hidden">
             <Slider ref={sliderRef} {...slickSettings}>
               {galleryData.map((item, index) => (
-                <div key={`${item.title}-${index}`} className="px-2 outline-none">
+                <div key={`${item.title}-${index}`} className="px-3 outline-none">
                   <button
                     type="button"
                     onClick={() => setSelectedImage(item)}
-                    className="block w-full cursor-pointer overflow-hidden rounded-[1.5rem]"
+                    className="block w-full cursor-pointer overflow-hidden rounded-[1.35rem]"
                     aria-label={`View ${item.title} in full size`}
                   >
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="aspect-square w-full rounded-[1.5rem] object-cover transition duration-300 hover:scale-[1.02]"
+                      className="aspect-square w-full rounded-[1.35rem] object-cover transition duration-300 hover:scale-[1.02]"
                     />
                   </button>
                 </div>
@@ -80,7 +76,7 @@ function GallerySection() {
             <button
               type="button"
               onClick={() => sliderRef.current?.slickPrev()}
-              className="absolute left-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-brand-navy shadow-md transition hover:bg-white"
+              className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg font-semibold text-brand-navy shadow-md transition hover:bg-white"
               aria-label="Previous image"
             >
               ←
@@ -89,7 +85,7 @@ function GallerySection() {
             <button
               type="button"
               onClick={() => sliderRef.current?.slickNext()}
-              className="absolute right-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-brand-navy shadow-md transition hover:bg-white"
+              className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg font-semibold text-brand-navy shadow-md transition hover:bg-white"
               aria-label="Next image"
             >
               →
