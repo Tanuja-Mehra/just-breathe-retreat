@@ -7,7 +7,7 @@ function HostSection() {
         <div className="grid gap-8 rounded-[2rem] border border-slate-200 bg-white/70 p-8 lg:grid-cols-[0.8fr_1.2fr] lg:p-12">
           <div className="flex items-center justify-center">
             <img
-              src="assets/gallery/host.jpg"
+              src="assets/host.jpg"
               alt="Pooja"
               className="h-56 w-56 rounded-full border-4 border-brand-teal object-cover"
             />
