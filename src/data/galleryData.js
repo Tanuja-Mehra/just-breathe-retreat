@@ -36,8 +36,8 @@ export const galleryData = [
   { title: 'Crochet workshop', tag: 'Workshop', image: 'assets/gallery/crochet1.jpg', thumbnail: 'assets/gallery/thumbs/crochet1.jpg' },
   { title: 'Creative hands', tag: 'Workshop', image: 'assets/gallery/crochet2.jpg', thumbnail: 'assets/gallery/thumbs/crochet2.jpg' },
 
-  { title: 'Kainchi Dham visit', tag: 'TempleVisit', image: 'assets/gallery/mandir.jpg', thumbnail: 'assets/gallery/thumbs/mandir.jpg' },
-  { title: 'Sacred path', tag: 'TempleVisit', image: 'assets/gallery/mandir1.jpg', thumbnail: 'assets/gallery/thumbs/mandir1.jpg' },
+  { title: 'Kainchi Dham visit', tag: 'TempleVisit', image: 'assets/gallery/mandir3.jpg', thumbnail: 'assets/gallery/thumbs/mandir.jpg' },
+  { title: 'Sacred path', tag: 'TempleVisit', image: 'assets/gallery/mandir.jpg', thumbnail: 'assets/gallery/thumbs/mandir1.jpg' },
   { title: 'Temple courtyard', tag: 'TempleVisit', image: 'assets/gallery/mandir2.jpg', thumbnail: 'assets/gallery/thumbs/mandir2.jpg' },
 
 ];

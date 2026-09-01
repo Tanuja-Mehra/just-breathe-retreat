@@ -53,7 +53,7 @@ function GallerySection() {
   };
 
   return (
-    <section id="gallery" className="bg-brand-cream px-6 py-20 lg:px-8">
+    <section id="gallery" className="bg-brand-cream px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-8">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-teal">Gallery</p>
