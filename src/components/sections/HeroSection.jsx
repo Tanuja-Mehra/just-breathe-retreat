@@ -1,7 +1,7 @@
 import Button from '../common/Button';
 import Badge from '../common/Badge';
 import { retreatInfo } from '../../data/retreatInfo';
-import heroImage from '/public/assets/hero.jpg';
+import heroImage from '/public/assets/hero.jpeg';
 
 function HeroSection() {
   return (

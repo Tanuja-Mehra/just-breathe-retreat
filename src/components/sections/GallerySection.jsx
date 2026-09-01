@@ -64,7 +64,7 @@ function GallerySection() {
                     aria-label={`View ${item.title} in full size`}
                   >
                     <img
-                      src={item.image}
+                      src={item.thumbnail || item.image}
                       alt={item.title}
                       className="aspect-square w-full rounded-[1.35rem] object-cover transition duration-300 hover:scale-[1.02]"
                     />
@@ -73,23 +73,6 @@ function GallerySection() {
               ))}
             </Slider>
 
-            <button
-              type="button"
-              onClick={() => sliderRef.current?.slickPrev()}
-              className="absolute left-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg font-semibold text-brand-navy shadow-md transition hover:bg-white"
-              aria-label="Previous image"
-            >
-              ←
-            </button>
-
-            <button
-              type="button"
-              onClick={() => sliderRef.current?.slickNext()}
-              className="absolute right-2 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-lg font-semibold text-brand-navy shadow-md transition hover:bg-white"
-              aria-label="Next image"
-            >
-              →
-            </button>
           </div>
         ) : (
           <div className="mt-6 rounded-[1.5rem] border border-dashed border-slate-300 bg-white/50 p-6 text-slate-500">
