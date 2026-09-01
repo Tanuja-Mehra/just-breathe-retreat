@@ -6,7 +6,6 @@ export const galleryData = [
   { title: 'Kayak glide', tag: 'Kayaking', image: 'assets/gallery/kayak1.jpg', thumbnail: 'assets/gallery/thumbs/kayak1.jpg' },
   { title: 'Lake kayaking', tag: 'Kayaking', image: 'assets/gallery/kayak2.jpg', thumbnail: 'assets/gallery/thumbs/kayak2.jpg' },
 
- 
   { title: 'Sunrise flow', tag: 'Yoga', image: 'assets/gallery/yoga1.jpg', thumbnail: 'assets/gallery/thumbs/yoga1.jpg' },
   { title: 'Mobility practice', tag: 'Yoga', image: 'assets/gallery/yoga2.jpg', thumbnail: 'assets/gallery/thumbs/yoga2.jpg' },
   { title: 'Breath-led practice', tag: 'Yoga', image: 'assets/gallery/yoga3.jpg', thumbnail: 'assets/gallery/thumbs/yoga3.jpg' },
