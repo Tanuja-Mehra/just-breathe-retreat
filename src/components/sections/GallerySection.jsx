@@ -12,7 +12,7 @@ function GallerySection() {
     dots: false,
     infinite: true,
     speed: 2200,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -21,8 +21,16 @@ function GallerySection() {
     arrows: false,
     variableWidth: false,
     centerMode: false,
-    draggable: false,
+    draggable: true,
+    swipeToSlide: true,
+    touchThreshold: 15,
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -30,7 +38,7 @@ function GallerySection() {
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },
@@ -56,17 +64,17 @@ function GallerySection() {
           <div className="relative overflow-hidden">
             <Slider ref={sliderRef} {...slickSettings}>
               {galleryData.map((item, index) => (
-                <div key={`${item.title}-${index}`} className="px-3 outline-none">
+                <div key={`${item.title}-${index}`} className="px-2 outline-none sm:px-3">
                   <button
                     type="button"
                     onClick={() => setSelectedImage(item)}
-                    className="block w-full cursor-pointer overflow-hidden rounded-[1.35rem]"
+                    className="block w-full cursor-pointer overflow-hidden rounded-[1.1rem] sm:rounded-[1.35rem]"
                     aria-label={`View ${item.title} in full size`}
                   >
                     <img
                       src={item.thumbnail || item.image}
                       alt={item.title}
-                      className="aspect-square w-full rounded-[1.35rem] object-cover transition duration-300 hover:scale-[1.02]"
+                      className="aspect-square w-full rounded-[1.1rem] object-cover transition duration-300 hover:scale-[1.02] sm:rounded-[1.35rem]"
                     />
                   </button>
                 </div>

@@ -1,6 +1,7 @@
 import Card from '../common/Card';
 import Button from '../common/Button';
 import { pricingData } from '../../data/pricingData';
+import { buildWhatsAppLink } from '../../utils/whatsapp';
 
 function PricingSection() {
   return (
@@ -15,7 +16,7 @@ function PricingSection() {
             <Card key={item.name} className={item.featured ? 'border-brand-teal shadow-soft' : ''}>
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-semibold text-brand-navy">{item.name}</h3>
-                {item.featured && <span className="rounded-full bg-brand-teal px-3 py-1 text-sm font-semibold text-brand-navy">Most Loved</span>}
+                {item.featured && <span className="rounded-full bg-brand-coral px-3 py-1 text-sm font-semibold text-brand-navy">favorite</span>}
               </div>
               <p className="mt-4 text-slate-600">{item.description}</p>
               <p className="mt-6 text-4xl font-semibold text-brand-navy">{item.price}</p>
@@ -24,7 +25,7 @@ function PricingSection() {
                   <li key={feature}>• {feature}</li>
                 ))}
               </ul>
-              <Button className="mt-8 w-full" variant={item.featured ? 'primary' : 'secondary'}>Get in Touch</Button>
+              <Button className="mt-8 w-full"onClick={() => window.open(buildWhatsAppLink(), '_blank')} variant={item.featured ? 'primary' : 'secondary'}>Get in Touch</Button>
             </Card>
           ))}
         </div>
