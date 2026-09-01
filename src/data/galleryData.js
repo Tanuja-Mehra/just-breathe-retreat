@@ -1,20 +1,19 @@
 export const galleryData = [
   { title: 'Forest walk', tag: 'walk', image: 'assets/gallery/walk1.jpg', thumbnail: 'assets/gallery/thumbs/walk1.jpg' },
   { title: 'Trail walk', tag: 'walk', image: 'assets/gallery/walk2.jpg', thumbnail: 'assets/gallery/thumbs/walk2.jpg' },
-  { title: 'Nature stroll', tag: 'walk', image: 'assets/gallery/walk3.jpg', thumbnail: 'assets/gallery/thumbs/walk3.jpg' },
   { title: 'Fresh-air walk', tag: 'walk', image: 'assets/gallery/walk4.jpg', thumbnail: 'assets/gallery/thumbs/walk4.jpg' },
 
   { title: 'Kayak glide', tag: 'Kayaking', image: 'assets/gallery/kayak1.jpg', thumbnail: 'assets/gallery/thumbs/kayak1.jpg' },
   { title: 'Lake kayaking', tag: 'Kayaking', image: 'assets/gallery/kayak2.jpg', thumbnail: 'assets/gallery/thumbs/kayak2.jpg' },
 
-  { title: 'Yoga deck', tag: 'Yoga', image: 'assets/gallery/yoga.jpg', thumbnail: 'assets/gallery/thumbs/yoga.jpg' },
+ 
   { title: 'Sunrise flow', tag: 'Yoga', image: 'assets/gallery/yoga1.jpg', thumbnail: 'assets/gallery/thumbs/yoga1.jpg' },
   { title: 'Mobility practice', tag: 'Yoga', image: 'assets/gallery/yoga2.jpg', thumbnail: 'assets/gallery/thumbs/yoga2.jpg' },
   { title: 'Breath-led practice', tag: 'Yoga', image: 'assets/gallery/yoga3.jpg', thumbnail: 'assets/gallery/thumbs/yoga3.jpg' },
   { title: 'Grounding poses', tag: 'Yoga', image: 'assets/gallery/yoga5.jpg', thumbnail: 'assets/gallery/thumbs/yoga5.jpg' },
   { title: 'Evening yoga', tag: 'Yoga', image: 'assets/gallery/yoga6.jpg', thumbnail: 'assets/gallery/thumbs/yoga6.jpg' },
   { title: 'Flow practice', tag: 'Yoga', image: 'assets/gallery/yoga7.jpg', thumbnail: 'assets/gallery/thumbs/yoga7.jpg' },
-  { title: 'Morning stretch', tag: 'Yoga', image: 'assets/gallery/yoga8.jpg', thumbnail: 'assets/gallery/thumbs/yoga8.jpg' },
+  
   { title: 'Yog Nidra rest', tag: 'Yoga', image: 'assets/gallery/yoga nidra2.jpg', thumbnail: 'assets/gallery/thumbs/yoga%20nidra2.jpg' },
 
   { title: 'Meditation stillness', tag: 'Yoga', image: 'assets/gallery/meditation.jpg', thumbnail: 'assets/gallery/thumbs/meditation.jpg' },
@@ -40,8 +39,5 @@ export const galleryData = [
   { title: 'Kainchi Dham visit', tag: 'TempleVisit', image: 'assets/gallery/mandir.jpg', thumbnail: 'assets/gallery/thumbs/mandir.jpg' },
   { title: 'Sacred path', tag: 'TempleVisit', image: 'assets/gallery/mandir1.jpg', thumbnail: 'assets/gallery/thumbs/mandir1.jpg' },
   { title: 'Temple courtyard', tag: 'TempleVisit', image: 'assets/gallery/mandir2.jpg', thumbnail: 'assets/gallery/thumbs/mandir2.jpg' },
-  { title: 'Morning temple visit', tag: 'TempleVisit', image: 'assets/gallery/mandir3.jpg', thumbnail: 'assets/gallery/thumbs/mandir3.jpg' },
-  { title: 'Pilgrimage view', tag: 'TempleVisit', image: 'assets/gallery/mandir4.jpg', thumbnail: 'assets/gallery/thumbs/mandir4.jpg' },
 
-  { title: 'Meditation calm', tag: 'Yoga', image: 'assets/gallery/maditation6.jpg', thumbnail: 'assets/gallery/thumbs/maditation6.jpg' },
 ];
