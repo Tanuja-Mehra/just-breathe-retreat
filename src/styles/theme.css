@@ -1,14 +1,27 @@
+@font-face {
+  font-family: 'Wondar Quason Free';
+  src: url('/assets/fonts/Wondar%20Quason%20Free.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --brand-teal: #069494;
   --brand-navy: #000000;
   --brand-cream: #f0cf8d;
   --brand-coral: #f7a655;
   --brand-dark-teal:  #069494;
+  --font-primary: 'Wondar Quason Free', 'Georgia', serif;
 }
 
 body {
   background-color: var(--brand-cream);
   color: var(--brand-navy);
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6, p, button, input, textarea, select, span, li {
+  font-family: var(--font-primary);
 }
 
 ::selection {
